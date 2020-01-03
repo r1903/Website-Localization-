@@ -1,0 +1,300 @@
+:root {
+  --background:#38aa0b;  /*back ground color variable declaration*/
+  
+  }
+.container {
+	display:flex;
+	background-color:green;
+  height:auto;
+    
+}
+.header{
+	flex:7;
+}
+
+.image{
+	flex:1;
+}
+
+.header h1{
+	font-size:50px;
+  margin-top:10px;
+  margin-bottom:10px;
+	margin-left:10px;
+	color:white;
+	font-family:algerian;
+	
+}
+
+.header p{
+	color:white;
+	margin-left:230px;
+  font-size:20px;
+  margin-top:0px;
+  margin-bottom:10px
+}
+
+.logo img{
+	height:150px;
+	width:150px;
+}
+/*navigation bar styles*/
+
+.nav ul{
+	display:flex;
+	margin:0;
+	padding:0;
+    justify-content:flex-end;
+    list-style-type: none;	
+    background:var(--background);
+    align-items: center;
+}
+
+.nav ul li{
+    text-align:center;
+    padding:0.5% 3%;
+    position:relative;
+}
+
+.nav ul li a{
+    color:white;
+    font-size:20px;
+    text-decoration:none;
+    text-transform: capitalize; 
+    white-space: nowrap;
+}
+
+.nav ul li a:hover{
+    color:black;  	
+}
+
+.nav ul li:hover > .subnav > li{
+	display:block;
+  top:0px;
+}
+
+.subnav li{
+	display:none;
+	position:absolute;
+  top:0px;
+  margin:5px 0;
+}
+
+.subnav {
+    display:flex;
+    flex-direction:column;
+    display:block;
+    position: absolute;
+    font-size:16px;
+}
+.arrow{
+    margin-left:8px;
+    font-size:14px;
+}
+
+/*main content style*/
+
+.main-content{
+	display:flex;
+	padding:5% 0 6% 0;
+	text-align:center;
+	justify-content:space-around;
+}
+
+.main, .main2{
+	flex-basis:15%;
+	padding:0 2%;
+	align-self:center;
+}
+.main q, .main p,.main2 q, .main2 p{
+    font-family: 'Sacramento', cursive;
+    font-family: 'Niconne', cursive;
+    font-size:16px;
+}
+
+.main1{
+	flex-basis:40%;
+	padding:0 2%;
+}
+
+
+/*footer style*/
+.footer {
+  background-color:green;
+display:flex;
+}
+
+.footer img{
+height:65px;
+width:65px;
+align-self: center;
+background-color: white;
+}
+
+.footer p{
+margin-left:1rem;
+}
+
+/*contact us page style*/
+.contact-items{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact{
+  padding:20px 0;  
+}
+
+.contact-items h2{
+color:black;
+font-size:30px;
+margin-bottom:18px;
+}
+.contact-items input[type="text"],input[type="email"],input[type="tel"]{
+  border-radius:10px;
+  margin-bottom:15px;
+  padding:15px;
+  width:50%;
+}
+
+.contact-item:hover{
+  box-shadow:0 0 10px 4px #38aa0b;
+}
+
+.contact-items textarea{
+  border-radius:10px;
+  height:150px;
+  margin-bottom:15px;
+  padding:15px;
+  width:50%; 
+  resize:none;
+}
+
+.contact-item-btn {
+  background-color: #38aa0b;
+  color:white;
+  display:block;
+  padding:10px;
+  width:10%;
+  cursor:pointer;
+  text-align: center;
+}
+
+.contact-item-btn:hover {
+  background-color: #93f06e;
+}
+/*----product page styles-----*/
+.product{
+  display:flex;
+  flex-direction:column;
+  padding:20px 0;
+}   
+
+.product h1{
+  align-self:center;
+}
+.productlist{
+  display:flex;
+  align-self:center;
+  justify-content: center;
+  width:80%;
+  border:2px;
+  box-shadow:0 0 10px 4px #e1e6df;
+  margin:20px 0;
+}
+.productimg{
+  flex:1;
+}
+.productimg img{
+  width:250px;
+  height:250px;
+}
+.productdesc{
+  flex:20;
+  padding:0 30px;
+}
+.productdesc h4{
+  text-align:center;
+}
+.productdesc ul li{
+padding:1% 0;
+}
+
+/* About us paage style*/
+
+.about{
+  width:80%;
+  margin:auto;
+  border:2px;
+  box-shadow:0 0 10px 4px #e1e6df;
+  height:auto;
+} 
+
+.about h1{
+padding:20px 0;
+text-align:center;
+}
+
+.about p{
+  text-indent:20px;
+  font-weight: bold;
+  font-size:20px;
+  padding-bottom:10px;
+}
+.about ul li{
+padding:1% 0;
+}
+@media all and (max-width:800px){
+
+.container{
+flex-direction:column;
+align-items: center;
+  }
+
+.header h1{
+font-size:30px;
+}
+
+.header p{ 
+display:none;
+}
+.logo img{
+height:100px;
+width:100px;
+}
+.nav ul {
+  flex-direction:column;		
+}	
+
+.subnav {
+  left:100%;
+  width:140px;
+  top:-100px;
+}
+
+.main-content{
+flex-direction:column;
+width:85%;
+margin:0 auto;
+}
+.main1 img {
+width:100%;
+height:auto;
+}	
+.main2{
+padding-top:5%;
+}
+/****contact page styles***/
+.contact-item-btn{
+  padding:5px 0;
+}
+/****product page styles***/
+.productlist{
+flex-direction:column;
+align-items: center;
+}
+.productimg img{
+width: 70%;
+height:70%;
+}
+}
